@@ -1,0 +1,25 @@
+#!groovy
+// Check ub1 properties
+properties([disableConcurrentBuilds()])
+
+pipeline {
+    agent { 
+        label 'master'
+        }
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
+        timestamps()
+    }
+    stages {
+        stage("Удаление сеансов и блокировка 1С") {
+            steps {
+                cmd '\'Hello world\''
+            }
+        }
+        stage("Разблокируем сеансы") {
+            steps {
+                cmd '\'Hello world 1\''
+            }
+        }
+    }
+}
