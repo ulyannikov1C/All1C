@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("Удаление сеансов и блокировка 1С") {
             steps {
-                sh 'Hello world\
+                cmd 'echo \'Hello!\' '
             }
         }
         stage("Разблокируем сеансы") {
             steps {
-                sh 'Hello world 1'
+                cmd 'echo \'Hello!\' '
             }
         }
     }
