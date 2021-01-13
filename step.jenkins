@@ -13,12 +13,12 @@ pipeline {
     stages {
         stage("Удаление сеансов и блокировка 1С") {
             steps {
-                echo \'Hello\'
+                echo 'Hello'
             }
         }
         stage("Разблокируем сеансы") {
             steps {
-                echo \'Hello1\'
+                echo 'Hello epta'
             }
         }
     }
